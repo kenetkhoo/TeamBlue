@@ -19,13 +19,13 @@ $(document).ready(function(){
 		
   });
   	xmlhttp=new XMLHttpRequest();
-	xmlhttp.open("GET","post.xml",false);
+	xmlhttp.open("GET","team.xml",false);
     xmlhttp.send();
     xmlDoc=xmlhttp.responseXML;
 	x = xmlDoc.getElementsByTagName("post");
-	for(i=0;i<x.length;i++)
+	for(i=0;i<2;i++)
 	{
-		date = x[0].getElementsByTagName("date")[i].childNodes[0].nodeValue;
+		date = x[0].getElementsByTagName("name")[i].childNodes[0].nodeValue;
 		body = x[0].getElementsByTagName("body")[i].childNodes[0].nodeValue;
 		$(".bodyItem").append('<div class = "post"><p class = "date">'+date+'</p><br><p class="postBody">'+body+'</p><br>');
 	}
@@ -50,7 +50,7 @@ $(document).ready(function(){
 	</div>
 	<div id="mainBody">
 		<div id="header">
-			<head>ANNOUNCEMENTS</head>
+			<head>TEAM</head>
 		</div>
 		<div class="bodyItem">
 			

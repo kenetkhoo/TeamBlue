@@ -14,11 +14,13 @@ background-color:#FFFFFF;
 width:1000px;
 }
 #menu{
-width:400px;
+position:relative;
+width:375px;
 height:990px;
 float:left;
 display:block;
 padding-top:10px;
+padding-right:25px;
 }
 #mainBody{
 width:600px;
@@ -38,6 +40,47 @@ border-color:#0000FF;
 display:block;
 background-color:#99AAEE;
 }
+#facebookicon{
+width:40px;
+height:40px;
+}
+#twittericon{
+width:40px;
+height:40px;
+}
+div.icon{
+position:relative;
+width:40px;
+height:40px;
+margin-top:3px;
+margin-left:3px;
+border-style:groove;
+border-width:1px;
+border-color:#FFFFFF;
+float:left;
+}
+div.icon:hover{
+border-color:#0000FF;
+}
+#raindrop{
+width:10px;
+height:20px;
+animation:movearrow 1s;
+-webkit-animation:movearrow 1s; /* Safari and Chrome */
+animation-iteration-count:infinite;
+-webkit-animation-iteration-count:infinite;
+}
+@keyframes movearrow{
+0%{transform: translate(0px,0px)}
+50%{transform: translate(0px,5px)}
+100%{transform: translate(0px,-5px);}
+}
+@-webkit-keyframes movearrow/* Safari and Chrome */
+{
+0%{-webkit-transform: translate(0px,0px)}
+50%{-webkit-transform: translate(0px,5px)}
+100%{-webkit-transform: translate(0px,-5px)}
+}
 div.menuItem{
 margin-top:10px;
 text-align:center;
@@ -50,15 +93,32 @@ display:block;
 background-color:#99AAEE;
 }
 div.bodyItem{
-text-align:center;
 width:580px;
-height:500px;
 padding-left:10px;
+padding-bottom:5px;
 border-style:groove;
 border-width:2px;
 border-color:#0000FF;
 display:block;
 background-color:#FFFFFF;
+}
+div.post{
+position:relative;
+margin-top:5px;
+margin-right:5px;
+margin-left:-5px;
+border-style:groove;
+border-width:2px;
+border-color:#0000FF;
+}
+p.postBody{
+margin-left:3px;
+word-wrap:break-word;
+}
+p.date{
+margin-left:3px;
+margin-right:50px;
+border-bottom:1px solid #000000;
 }
 p.Names{
 position:absolute;
@@ -87,8 +147,8 @@ from{left:0;top:0;}
 to{left:0;top:5px;}
 }
 a.navoption{
-color:#FFFFFF;
-background-color:#8866DD;
+color:#000000;
+background-color:#99AAEE;
 position:relative;
 padding-top:50px;
 text-decoration:none;
@@ -99,7 +159,7 @@ border-color:#0000FF;
 a.navoption:hover{
 animation:pulldown 0.5s forwards;
 -webkit-animation:pulldown 0.5s forwards; /* Safari and Chrome */
-color:#000000;
+color:#FFFFFF;
 }
 @keyframes pulldown
 {
