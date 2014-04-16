@@ -7,7 +7,7 @@ using System.Collections;
 public class PlayerScript : MonoBehaviour {
 
 	/// <summary>
-	/// 1 - The speed of the ship
+	/// 1 - The speed of the drop
 	/// </summary>
 	public Vector2 speed = new Vector2(50, 50);
 
@@ -38,6 +38,7 @@ public class PlayerScript : MonoBehaviour {
 		{
 			if(obj.isObstacle)
 			{
+				Application.LoadLevel (1);
 				Destroy(gameObject);
 			}
 		}
