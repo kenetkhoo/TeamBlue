@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 <body >
@@ -23,7 +22,7 @@ $(document).ready(function(){
     xmlhttp.send();
     xmlDoc=xmlhttp.responseXML;
 	x = xmlDoc.getElementsByTagName("post");
-	for(i=0;i<x.length;i++)
+	for(i=0;i<x[0].childNodes.length;i++)
 	{
 		date = x[0].getElementsByTagName("date")[i].childNodes[0].nodeValue;
 		body = x[0].getElementsByTagName("body")[i].childNodes[0].nodeValue;
