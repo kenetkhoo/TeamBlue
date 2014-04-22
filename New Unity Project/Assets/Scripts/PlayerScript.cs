@@ -47,7 +47,7 @@ public class PlayerScript : MonoBehaviour {
 		{
 			if(obj.isObstacle)
 			{
-				Application.LoadLevel (1);
+				Application.LoadLevel (2);
 				Destroy(gameObject);
 			}
 		}
