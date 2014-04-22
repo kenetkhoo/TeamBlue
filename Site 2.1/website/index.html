@@ -1,0 +1,201 @@
+
+<html>
+<head>
+  <title>jrops</title>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="stylesheet" type="text/css" href="css/default.css" />
+  <style type="text/css">
+  body 
+  {
+	color: #000000;
+    background-color:#E2F5FC;
+	font-family: monospace;
+	letter-spacing:1px;
+  }
+  h1
+  {
+	font-family: Geneva;
+	letter-spacing: 2px;
+  }
+  h2
+  {
+  	font-family: monospace;
+	color:#42C0FB;
+	letter-spacing: 2px;
+	text-transform:capitalize;
+	text-align: center;
+	padding:0px;
+  }
+  #navbar
+  {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	color: #ffffff;
+	height: 45px;
+	text-align: center;
+	padding-top: 15px;
+	background-color: rgba(1, 1, 1, 0.9);
+	color: rgba(1, 1, 1, 0.9);
+	}
+	
+	#navbar a 
+	{
+		font-size: 14px;
+		padding-left: 15px;
+		padding-right: 15px;
+		color: #ffffff;
+		text-decoration: none;
+	}
+
+	a:link
+	{
+		color: #000000;
+	}
+	
+	a:visited
+	{
+		color: #000000;
+	}
+	a:hover
+	{
+		color: #000000;
+		font-weight: bold;
+		border-bottom: 2px #6AFB92 solid;
+		
+	}
+	.separator 
+	{ 
+		font-size: 20px; 
+		color: #ffffff;
+	}
+	address 
+	{
+		width: 100%; 
+		left: 0px;
+		margin-top: 360px;
+		background:#000000;
+		border: 5px #000000 solid;
+		position: fixed;
+		bottom: 0px;
+		font-family: courier new;
+		font-size: 11pt;
+	}
+  
+  </style>
+ </head>
+ 
+<body>
+
+<!-- Site navigation menu -->
+<div id = "navbar">
+	<a href="index.html">Home</a>
+	<a href="team.html">About us </a>
+	<a href="https://www.facebook.com/JropsApp">Facebook</a>
+	<a href="https://twitter.com/jropsapp">Twitter</a>
+</div>	
+		
+<!--banner-->
+<div id = "banner">
+	<p>Welcome!</p>
+	<style>
+	div#banner
+	{
+		width:auto;
+		height:500px;  
+		margin:0 auto;  
+		background:url(raindrop.jpg);
+		background-repeat: none;
+	}
+	div#banner p 
+	{
+		left:50px; 
+		top:380px;		
+		font: 20px Arial, Helvetica, sans-serif;
+		color:#ffffff;  
+		background-color:#000000;  
+		width:290px;  
+		text-transform:uppercase; 
+		letter-spacing:20px;   		
+		position:relative;
+		text-align:center;
+		padding: 25px 20px 25px 25px;
+		opacity: 0.5;   	
+	}
+	</style>
+</div>
+
+
+<!--content-->
+<div class="content">
+	<p><img src = "logo.gif"></a></p>
+	<style>	
+	.content
+	{
+		width:100%;
+		height:auto;
+		margin:0px auto;
+		padding:0px;
+		background-color:#E2F5FC;
+		text-align: center;
+		vertical-align: middle;
+	}
+	p
+	{
+		margin-top:5px;
+	}
+	</style>
+</div>
+
+<!--content-->
+<div class="content1">
+	<p><br><br><br>Exclusively for Android platform.</p>
+	<img src = "coming.gif"></a>
+	<style>	
+	.content1
+	{
+		position: absolute;
+		width:100%;
+		height:100%;
+		margin:10px auto;
+		padding:0px;
+		background-color:rgba(255,255,255, 0.8);
+		text-align: center;
+		vertical-align: middle;
+	}
+	p
+	{
+		top:15px;
+	}
+	</style>
+</div>
+
+
+<script src="http://jquerydemo.com/demo/js/jquery-1.8.2.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+(function($) 
+{
+	var x = 0;
+	var y = 0;
+	var banner = $("#banner");
+	banner.css('backgroundPosition', x + 'px' + ' ' + y + 'px');
+	window.setInterval(function() {
+	banner.css("backgroundPosition", x + 'px' + ' ' + y + 'px');
+	y++;
+}, 90);
+
+})(jQuery);
+</script>
+
+
+<!-- Bottom layer -->
+<address>
+<center>
+	<span style="color:#ffffff"> Jrops and website created by Team Blue. &nbsp; | &nbsp; 3801 W Temple Ave, Pomona, CA 91768</span>
+	</center>
+</address>
+
+</body>
+</html>
