@@ -11,8 +11,8 @@ public class ExpandText : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if(scale <= 1.0f)
-			scale = scale + 0.05f;
+			scale = scale + 0.025f;
 		if (scale < 1.0f)
-			transform.localScale += new Vector3(0.05f,0.05f,0);
+			transform.localScale += new Vector3(0.025f,0.025f,0);
 	}
 }
