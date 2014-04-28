@@ -14,19 +14,26 @@ public class PlayerScript : MonoBehaviour {
 	// 2 - Store the movement;
 	private Vector2 movement;
 
+	private bool facingRight = true;
+
 	void Update()
 	{
-		// 3 - Retrieve axis information
-		float inputX = Input.GetAxis ("Horizontal");
-
-		// 4 - Movement per direction
-		movement = new Vector2 (
-			speed.x * inputX,
-			0);
 	}
 
 	void FixedUpdate()
 	{
+		// 3 - Retrieve axis information
+		float inputX = Input.GetAxis ("Horizontal");
+		
+		// 4 - Movement per direction
+		movement = new Vector2 (
+			speed.x * inputX,
+			0);
+		if(facingRight && movement.x < 0)
+			Flip ();
+		else if(!facingRight && movement.x > 0)
+			Flip ();
+
 		//boundaries control
 		Vector3 playerSize = GetComponent<SpriteRenderer> ().sprite.bounds.size;
 		float viewWidth = (Screen.width * Camera.main.orthographicSize) / Screen.height;
@@ -37,7 +44,13 @@ public class PlayerScript : MonoBehaviour {
 		// 5 - Move the game object
 		rigidbody2D.velocity = movement;
 		//accelerometer control
-		rigidbody2D.transform.Translate(Input.acceleration.x*0.4f,0,0);
+		float x = Input.acceleration.x;
+		rigidbody2D.transform.Translate(x*0.4f,0,0);
+		if(facingRight && x < 0)
+			Flip ();
+		else if(!facingRight && x > 0)
+			Flip ();
+
 	}
 
 	void OnTriggerEnter2D(Collider2D otherCollider)
@@ -52,5 +65,13 @@ public class PlayerScript : MonoBehaviour {
 			}
 		}
 			
+	}
+
+	void Flip()
+	{
+		facingRight = !facingRight;
+		Vector3 theScale = transform.localScale;
+		theScale.x *= -1;
+		transform.localScale = theScale;
 	}
 }

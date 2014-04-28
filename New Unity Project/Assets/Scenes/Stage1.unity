@@ -591,6 +591,7 @@ MonoBehaviour:
   obj:
   - {fileID: 100000, guid: 81269f497595dfd4194379167e8cb3f4, type: 2}
   - {fileID: 100000, guid: b4936cc753d20a04b9cb5cd120ba890e, type: 2}
+  - {fileID: 100000, guid: 48a84d8d8e046b0479af459c05d99e72, type: 2}
   spawnMin: 3
   spawnMax: 7
 --- !u!23 &1192831860
@@ -682,6 +683,7 @@ MonoBehaviour:
   obj:
   - {fileID: 100000, guid: 81269f497595dfd4194379167e8cb3f4, type: 2}
   - {fileID: 100000, guid: b4936cc753d20a04b9cb5cd120ba890e, type: 2}
+  - {fileID: 100000, guid: 48a84d8d8e046b0479af459c05d99e72, type: 2}
   spawnMin: 1
   spawnMax: 15
 --- !u!23 &1289953478
@@ -866,6 +868,7 @@ MonoBehaviour:
   obj:
   - {fileID: 100000, guid: 81269f497595dfd4194379167e8cb3f4, type: 2}
   - {fileID: 100000, guid: b4936cc753d20a04b9cb5cd120ba890e, type: 2}
+  - {fileID: 100000, guid: 48a84d8d8e046b0479af459c05d99e72, type: 2}
   spawnMin: 5
   spawnMax: 10
 --- !u!23 &1362071465
