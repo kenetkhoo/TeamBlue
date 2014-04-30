@@ -22,7 +22,11 @@ public class GameOverScript : MonoBehaviour {
 		GUI.Label (new Rect (Screen.width / 2 - 40, Screen.height/6, width, height), "Score: " + score);
 		if(GUI.Button (new Rect(Screen.width / 4, Screen.height/4, width, height), content))
 		{
-			Application.LoadLevel(1);
+			Application.LoadLevel("Stage1");
+		}
+		if(GUI.Button (new Rect(Screen.width / 4, Screen.height/4 + 100, width, height), "Menu"))
+		{
+			Application.LoadLevel("TitleScreen");
 		}
 	}
 }

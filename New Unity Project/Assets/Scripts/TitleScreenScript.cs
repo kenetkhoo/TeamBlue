@@ -22,5 +22,17 @@ public class TitleScreenScript : MonoBehaviour {
 		{
 			Application.LoadLevel("Stage1");
 		}
+		
+		if(GUI.Button (new Rect(Screen.width / 4 , Screen.height/4 + 80, width, height), "High Score"))
+		{
+			Application.LoadLevel("Stage1");
+			//change later to correct stage
+		}
+		
+		if(GUI.Button (new Rect(Screen.width / 4 , Screen.height/4 + 160, width, height), "Weather"))
+		{
+			Application.LoadLevel("Stage1");
+			//change later to correct stage
+		}
 	}
 }
