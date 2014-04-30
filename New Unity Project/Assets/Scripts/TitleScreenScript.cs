@@ -34,5 +34,15 @@ public class TitleScreenScript : MonoBehaviour {
 			Application.LoadLevel("Stage1");
 			//change later to correct stage
 		}
+		if(GUI.Button (new Rect(Screen.width / 16 , Screen.height/16 + 300, 50, 50), "Twitter"))
+		{
+			
+		}
+		
+		if(GUI.Button (new Rect(Screen.width / 16 + 60  , Screen.height/16 + 300, 50, 50), "FB"))
+		{
+			
+		}
+	}
 	}
 }
