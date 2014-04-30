@@ -13,11 +13,15 @@
     background-color:#E2F5FC;
 	font-family: monospace;
 	letter-spacing:1px;
+	padding: 0; 
+	margin: 0;
+	font-weight: 100;
   }
   h1
   {
 	font-family: Geneva;
 	letter-spacing: 2px;
+	font-weight: 100;
   }
   h2
   {
@@ -27,18 +31,19 @@
 	text-transform:capitalize;
 	text-align: center;
 	padding:0px;
+	font-weight: 100;
   }
   #navbar
   {
-	position: absolute;
-	top: 0;
-	width: 100%;
-	color: #ffffff;
-	height: 45px;
-	text-align: center;
-	padding-top: 15px;
-	background-color: rgba(1, 1, 1, 0.9);
-	color: rgba(1, 1, 1, 0.9);
+		position: absolute;
+		top: 0;
+		width: 100%;
+		color: #ffffff;
+		height: 45px;
+		text-align: center;
+		padding-top: 15px;
+		background-color: rgba(1, 1, 1, 0.9);
+		color: rgba(1, 1, 1, 0.9);
 	}
 	
 	#navbar a 
@@ -48,22 +53,26 @@
 		padding-right: 15px;
 		color: #ffffff;
 		text-decoration: none;
+		font-weight: 100;
 	}
 
 	a:link
 	{
 		color: #000000;
+		font-weight: 100;
 	}
 	
 	a:visited
 	{
 		color: #000000;
+		font-weight: 100;
 	}
 	a:hover
 	{
 		color: #000000;
 		font-weight: bold;
-		border-bottom: 2px #6AFB92 solid;
+		border-bottom: 2px #ffffff solid;
+		font-weight: 100;
 		
 	}
 	.separator 
@@ -93,8 +102,8 @@
 <div id = "navbar">
 	<a href="index.html">Home</a>
 	<a href="team.html">About us </a>
-	<a href="https://www.facebook.com/JropsApp" target="_blank">Facebook</a>
-	<a href="https://twitter.com/jropsapp" target="_blank">Twitter</a>
+	<a href="https://www.facebook.com/JropsApp">Facebook</a>
+	<a href="https://twitter.com/jropsapp">Twitter</a>
 </div>	
 		
 <!--banner-->
@@ -151,30 +160,33 @@
 
 <!--content-->
 <div class="content1">
-	<p><br><br><br>Exclusively for Android platform.</p>
-	<img src = "coming.gif"></a>
+	<img src = "logo4.gif" hspace="300"></a>
+	<div class="blink" style="margin-left:690px; margin-top:-220px; font-size: 20px; text-transform:uppercase">Coming soon...</div>
 	<style>	
 	.content1
 	{
 		position: absolute;
 		width:100%;
 		height:100%;
-		margin:10px auto;
-		padding:0px;
+		margin:2px auto;
+		padding:20px;
 		background-color:rgba(255,255,255, 0.8);
-		text-align: center;
+		text-align: left;
 		vertical-align: middle;
-	}
-	p
-	{
-		top:15px;
 	}
 	</style>
 </div>
 
-
 <script src="http://jquerydemo.com/demo/js/jquery-1.8.2.min.js" type="text/javascript"></script>
 <script type="text/javascript">
+
+function blinker() {
+    $('.blink').fadeOut(1000);
+    $('.blink').fadeIn(4000);
+}
+
+setInterval(blinker, 1500);
+
 (function($) 
 {
 	var x = 0;
