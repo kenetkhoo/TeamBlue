@@ -17,14 +17,16 @@ public class GameOverScript : MonoBehaviour {
 
 	void OnGUI()
 	{
-		GUI.Label (new Rect (Screen.width / 2 - 40, Screen.height/10, width*2, height), "GAME OVER");
+		GUI.skin.button.fontSize = Mathf.RoundToInt (Screen.height / 20f);
+		GUI.skin.label.fontSize = Mathf.RoundToInt (Screen.height / 22f);
+		GUI.Label (new Rect (Screen.width / 4 , Screen.height/10, width*2, height), "GAME OVER");
 
-		GUI.Label (new Rect (Screen.width / 2 - 40, Screen.height/6, width, height), "Score: " + score);
+		GUI.Label (new Rect (Screen.width / 4, Screen.height/6, width, height), "Score: " + score);
 		if(GUI.Button (new Rect(Screen.width / 4, Screen.height/4, width, height), content))
 		{
 			Application.LoadLevel("Stage1");
 		}
-		if(GUI.Button (new Rect(Screen.width / 4, Screen.height/4 + 100, width, height), "Menu"))
+		if(GUI.Button (new Rect(Screen.width / 4, Screen.height/2.5f, width, height), "Menu"))
 		{
 			Application.LoadLevel("TitleScreen");
 		}

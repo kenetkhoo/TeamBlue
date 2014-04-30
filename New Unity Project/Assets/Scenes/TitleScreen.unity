@@ -102,7 +102,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 259efe0f929d3c84bbedd287d8cae686, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scale: 0
+  maxScale: .800000012
 --- !u!212 &574655766
 SpriteRenderer:
   m_ObjectHideFlags: 0
