@@ -16,6 +16,7 @@ public class HUDScript : MonoBehaviour {
 
 	void OnGUI()
 	{
+		GUI.contentColor = Color.gray;
 		GUI.Label(new Rect(10, 10, 100, 30), "Score: " + (int) (playerScore * 100));
 	}
 
