@@ -6,31 +6,32 @@ public class TitleScreenScript : MonoBehaviour {
 	float height;
 	public Texture2D image;
 	GUIContent content = new GUIContent();
+	public GUIStyle customButton;
 	// Use this for initialization
 	void Start () {
 		width = ((Screen.width / 2) * Camera.main.pixelWidth) / Screen.width;
 		height =  ((Screen.height/ 10) * Camera.main.pixelHeight) / Screen.height;
 		content.image = (Texture2D)image;
-
-	
+		
+		
 	}
 	
 	// Update is called once per frame
 	void OnGUI()
 	{
 		GUI.skin.button.fontSize = Mathf.RoundToInt (Screen.height / 20f);
-		if(GUI.Button (new Rect(Screen.width / 4 , Screen.height/4, width, height), content))
+		if(GUI.Button (new Rect(Screen.width / 4 , Screen.height/4, width, height), "Start", customButton))
 		{
 			Application.LoadLevel("Stage1");
 		}
 		
-		if(GUI.Button (new Rect(Screen.width / 4 , Screen.height/2.5f, width, height), "High Score"))
+		if(GUI.Button (new Rect(Screen.width / 4 , Screen.height/2.5f, width, height), "High Score", customButton))
 		{
 			Application.LoadLevel("Stage1");
 			//change later to correct stage
 		}
 		
-		if(GUI.Button (new Rect(Screen.width / 4 , Screen.height/1.8f, width, height), "Weather"))
+		if(GUI.Button (new Rect(Screen.width / 4 , Screen.height/1.8f, width, height), "Weather", customButton))
 		{
 			Application.LoadLevel("Stage1");
 			//change later to correct stage
@@ -45,5 +46,5 @@ public class TitleScreenScript : MonoBehaviour {
 			
 		}
 	}
-
+	
 }
