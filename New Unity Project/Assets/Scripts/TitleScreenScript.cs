@@ -19,19 +19,21 @@ public class TitleScreenScript : MonoBehaviour {
 	// Update is called once per frame
 	void OnGUI()
 	{
-		GUI.skin.button.fontSize = Mathf.RoundToInt (Screen.height / 20f);
-		if(GUI.Button (new Rect(Screen.width / 4 , Screen.height/4, width, height), "Start", customButton))
+		customButton.fontSize = Mathf.RoundToInt (Screen.height / 30f);
+		customButton.fixedHeight = height*2;
+		customButton.fixedWidth = width;
+		if(GUI.Button (new Rect(Screen.width / 4 , Screen.height/4, width, height*2), "Start", customButton))
 		{
 			Application.LoadLevel("Stage1");
 		}
 		
-		if(GUI.Button (new Rect(Screen.width / 4 , Screen.height/2.5f, width, height), "High Score", customButton))
+		if(GUI.Button (new Rect(Screen.width / 4 , Screen.height/2.5f, width, height*2), "High Score", customButton))
 		{
 			Application.LoadLevel("Stage1");
 			//change later to correct stage
 		}
 		
-		if(GUI.Button (new Rect(Screen.width / 4 , Screen.height/1.8f, width, height), "Weather", customButton))
+		if(GUI.Button (new Rect(Screen.width / 4 , Screen.height/1.8f, width, height*2), "Weather", customButton))
 		{
 			Application.LoadLevel("Stage1");
 			//change later to correct stage
