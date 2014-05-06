@@ -48,8 +48,14 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Sample Assets/Sample Scenes/Scenes/2D Character.unity
   - enabled: 1
-    path: Assets/Scenes/TitleScreen.unity
+    path: Assets/Menu/Scenes/TitleScene.unity
   - enabled: 1
-    path: Assets/Scenes/Stage1.unity
+    path: Assets/Gameplay/Scenes/GameScene.unity
   - enabled: 1
-    path: Assets/Scenes/GameOverScene.unity
+    path: Assets/Gameplay/Scenes/GameOverScene.unity
+  - enabled: 1
+    path: Assets/Menu/Scenes/HighScoreScene.unity
+  - enabled: 1
+    path: Assets/Menu/Scenes/WeatherScene.unity
+  - enabled: 1
+    path: Assets/Menu/Scenes/SettingsScene.unity

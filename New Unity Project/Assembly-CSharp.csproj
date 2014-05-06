@@ -46,21 +46,20 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Gameplay\Scripts\DestroyerScript.cs" />
+     <Compile Include="Assets\Gameplay\Scripts\GameOverScript.cs" />
+     <Compile Include="Assets\Gameplay\Scripts\HUDScript.cs" />
+     <Compile Include="Assets\Gameplay\Scripts\MoveScript.cs" />
+     <Compile Include="Assets\Gameplay\Scripts\ObjScript.cs" />
+     <Compile Include="Assets\Gameplay\Scripts\PlayerScript.cs" />
+     <Compile Include="Assets\Gameplay\Scripts\ScrollScript.cs" />
+     <Compile Include="Assets\Gameplay\Scripts\SpawnScript.cs" />
      <Compile Include="Assets\JSON Tests\CSharp\Test_CSharp.cs" />
-     <Compile Include="Assets\Scripts\DestroyerScript.cs" />
-     <Compile Include="Assets\Scripts\DisplayWeatherScript.cs" />
-     <Compile Include="Assets\Scripts\ExpandText.cs" />
-     <Compile Include="Assets\Scripts\GameOverScript.cs" />
-     <Compile Include="Assets\Scripts\GradientBackgroundForCamera.cs" />
-     <Compile Include="Assets\Scripts\HUDScript.cs" />
-     <Compile Include="Assets\Scripts\MoveScript.cs" />
-     <Compile Include="Assets\Scripts\ObjScript.cs" />
-     <Compile Include="Assets\Scripts\PlayerScript.cs" />
-     <Compile Include="Assets\Scripts\ScrollScript.cs" />
-     <Compile Include="Assets\Scripts\SpawnScript.cs" />
-     <Compile Include="Assets\Scripts\TitleScreenScript.cs" />
-     <Compile Include="Assets\Scripts\WeatherScript.cs" />
-     <Compile Include="Assets\Scripts\rotateCloud.cs" />
+     <Compile Include="Assets\Menu\Scripts\DisplayWeatherScript.cs" />
+     <Compile Include="Assets\Menu\Scripts\ExpandText.cs" />
+     <Compile Include="Assets\Menu\Scripts\GradientBackgroundForCamera.cs" />
+     <Compile Include="Assets\Menu\Scripts\TitleScreenScript.cs" />
+     <Compile Include="Assets\Menu\Scripts\rotateCloud.cs" />
      <None Include="Assets\JSON Tests\TroubleShoot.txt" />
  <Reference Include="ICSharpCode.SharpZipLib">
  <HintPath>Assets\plugins\ICSharpCode.SharpZipLib.dll</HintPath>
