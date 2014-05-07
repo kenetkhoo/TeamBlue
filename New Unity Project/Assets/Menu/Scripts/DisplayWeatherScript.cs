@@ -48,14 +48,12 @@ public class DisplayWeatherScript : MonoBehaviour
 		
 		//get the current weather
         WWW request = new WWW("http://api.openweathermap.org/data/2.5/weather?q=" + currentCity); 
+		//search by lat and long api.openweathermap.org/data/2.5/weather?lat=??&lon=??
         yield return request;
 		
 		if (request.error == null || request.error == "")
 		{
 			var N = JSON.Parse(request.text);
-			retrievedCoordinates = N["coord"]["lon"].Value; //longitude
-			retrievedCoordinates2 = N["coord"]["lat"].Value; //longitude
-            retrievedCity = N["name"].Value; //get the city
 			
 			temp = N["main"]["temp"].Value; //get the temperature
             float tempTemp; //variable to hold the parsed temperature
@@ -72,6 +70,6 @@ public class DisplayWeatherScript : MonoBehaviour
 	void OnGUI()
 	{
 		GUI.Label(new Rect(Screen.width / 2.0f , Screen.height/5.5f, width, height),  Celsius.ToString() + "C");
-		GUI.Label(new Rect(Screen.width / 3 , Screen.height/5.5f, width, height), Fahrenheit.ToString() + "F");
+		GUI.Label(new Rect(Screen.width / 3.5f , Screen.height/5.5f, width, height), Fahrenheit.ToString() + "F");
     }
 }

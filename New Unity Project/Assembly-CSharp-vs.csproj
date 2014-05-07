@@ -55,9 +55,11 @@
      <Compile Include="Assets\Gameplay\Scripts\ScrollScript.cs" />
      <Compile Include="Assets\Gameplay\Scripts\SpawnScript.cs" />
      <Compile Include="Assets\JSON Tests\CSharp\Test_CSharp.cs" />
+     <Compile Include="Assets\Menu\Scripts\BackToMenuScript.cs" />
      <Compile Include="Assets\Menu\Scripts\DisplayWeatherScript.cs" />
      <Compile Include="Assets\Menu\Scripts\ExpandText.cs" />
      <Compile Include="Assets\Menu\Scripts\GradientBackgroundForCamera.cs" />
+     <Compile Include="Assets\Menu\Scripts\HighScoreToMenuScript.cs" />
      <Compile Include="Assets\Menu\Scripts\TitleScreenScript.cs" />
      <Compile Include="Assets\Menu\Scripts\rotateCloud.cs" />
      <None Include="Assets\JSON Tests\TroubleShoot.txt" />
