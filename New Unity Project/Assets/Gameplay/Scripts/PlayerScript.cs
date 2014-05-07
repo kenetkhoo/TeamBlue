@@ -11,7 +11,8 @@ public class PlayerScript : MonoBehaviour {
 	/// </summary>
 	public Vector2 speed = new Vector2(50, 50);
 	public ParticleSystem splashEffect;
-	
+	public Sprite falling;
+	public Sprite normal;
 	// 2 - Store the movement;
 	private Vector2 movement;
 	
@@ -40,10 +41,16 @@ public class PlayerScript : MonoBehaviour {
 			//check for tounch
 			foreach (Touch touch in Input.touches) {
 				if ( touch.phase != TouchPhase.Ended && touch.phase != TouchPhase.Canceled)
+				{
 					touching = true;
+					GetComponent<SpriteRenderer>().sprite = falling;
+				}
 			}
 			if (Input.touchCount == 0)
+			{
 				touching = false;
+				GetComponent<SpriteRenderer>().sprite = normal;
+			}
 			//boundaries control
 			Vector3 playerSize = GetComponent<SpriteRenderer> ().sprite.bounds.size;
 			float viewWidth = (Screen.width * Camera.main.orthographicSize) / Screen.height;

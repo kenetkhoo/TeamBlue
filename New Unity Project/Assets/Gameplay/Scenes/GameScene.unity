@@ -413,6 +413,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: {x: 10, y: 10}
   splashEffect: {fileID: 19800000, guid: 5169348ce1600f24eae319bb6baaffc1, type: 2}
+  falling: {fileID: 21300000, guid: 18d999dbea6166c4cb99edbdba7fb3ea, type: 3}
+  normal: {fileID: 21300000, guid: 41095735b24885448ab4d75eb03da455, type: 3}
 --- !u!50 &951522215
 Rigidbody2D:
   m_ObjectHideFlags: 0
@@ -1027,6 +1029,16 @@ Prefab:
       value: 
       objectReference: {fileID: 19800000, guid: 5169348ce1600f24eae319bb6baaffc1,
         type: 2}
+    - target: {fileID: 11400000, guid: 955a16b509f72fe48b707af3e5446425, type: 2}
+      propertyPath: falling
+      value: 
+      objectReference: {fileID: 21300000, guid: 18d999dbea6166c4cb99edbdba7fb3ea,
+        type: 3}
+    - target: {fileID: 11400000, guid: 955a16b509f72fe48b707af3e5446425, type: 2}
+      propertyPath: normal
+      value: 
+      objectReference: {fileID: 21300000, guid: 41095735b24885448ab4d75eb03da455,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 955a16b509f72fe48b707af3e5446425, type: 2}
   m_RootGameObject: {fileID: 951522211}
