@@ -10,7 +10,7 @@ public class TitleScreenScript : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		width = ((Screen.width / 2) * Camera.main.pixelWidth) / Screen.width;
-		height =  ((Screen.height/ 10) * Camera.main.pixelHeight) / Screen.height;
+		height =  ((Screen.height/ 12) * Camera.main.pixelHeight) / Screen.height;
 		content.image = (Texture2D)image;
 		
 		
@@ -19,31 +19,35 @@ public class TitleScreenScript : MonoBehaviour {
 	// Update is called once per frame
 	void OnGUI()
 	{
-		customButton.fontSize = Mathf.RoundToInt (Screen.height / 30f);
+		customButton.fontSize = Mathf.RoundToInt (Screen.height / 20f);
 		customButton.fixedHeight = height*2;
 		customButton.fixedWidth = width;
-		if(GUI.Button (new Rect(Screen.width / 4 , Screen.height/4, width, height*2), "Start", customButton))
+		if(GUI.Button (new Rect(Screen.width / 4 , Screen.height/4, width, height), "Start", customButton))
 		{
 			Application.LoadLevel("GameScene");
 		}
 		
-		if(GUI.Button (new Rect(Screen.width / 4 , Screen.height/2.5f, width, height*2), "High Score", customButton))
+		if(GUI.Button (new Rect(Screen.width / 4 , Screen.height/2.5f, width, height), "High Score", customButton))
 		{
 			Application.LoadLevel("HighScoreScene");
-			//change later to correct stage
 		}
 		
-		if(GUI.Button (new Rect(Screen.width / 4 , Screen.height/1.8f, width, height*2), "Weather", customButton))
+		if(GUI.Button (new Rect(Screen.width / 4 , Screen.height/1.8f, width, height), "Weather", customButton))
 		{
 			Application.LoadLevel("WeatherScene");
-			//change later to correct stage
 		}
-		if(GUI.Button (new Rect(Screen.width / 16 , Screen.height/1.2f , width/3, height), "TW"))
+
+		if(GUI.Button (new Rect(Screen.width / 4 , Screen.height/1.4f, width, height), "Settings", customButton))
+		{
+			Application.LoadLevel("SettingsScene");
+		}
+
+		if(GUI.Button (new Rect(Screen.width / 16 , Screen.height/1.1f , width/3, height), "TW"))
 		{
 			
 		}
 		
-		if(GUI.Button (new Rect(Screen.width / 3.8f  , Screen.height/1.2f , width/3, height), "FB"))
+		if(GUI.Button (new Rect(Screen.width / 3.8f  , Screen.height/1.1f , width/3, height), "FB"))
 		{
 			
 		}

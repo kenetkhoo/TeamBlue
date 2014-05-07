@@ -1,8 +1,11 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Gameplay\Scripts\GameOverScript.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Menu\Scripts\TitleScreenScript.cs">
     <Files>
-      <File FileName="Assets\Gameplay\Scripts\GameOverScript.cs" Line="35" Column="1" />
+      <File FileName="Assets\Gameplay\Scripts\GameOverScript.cs" Line="1" Column="1" />
+      <File FileName="Assets\Menu\Scripts\TitleScreenScript.cs" Line="28" Column="4" />
+      <File FileName="Assets\Menu\Scripts\ExpandText.cs" Line="1" Column="1" />
+      <File FileName="Assets\Menu\Scripts\DisplayWeatherScript.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
