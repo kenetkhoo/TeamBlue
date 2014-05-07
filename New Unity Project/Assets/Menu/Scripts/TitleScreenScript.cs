@@ -19,30 +19,30 @@ public class TitleScreenScript : MonoBehaviour {
 	// Update is called once per frame
 	void OnGUI()
 	{
-		customButton.fontSize = Mathf.RoundToInt (Screen.height / 20f);
-		customButton.fixedHeight = height*2;
+		customButton.fontSize = Mathf.RoundToInt (Screen.height / 25f);
+		customButton.fixedHeight = height*2.8f;
 		customButton.fixedWidth = width;
-		if(GUI.Button (new Rect(Screen.width / 4 , Screen.height/4, width, height), "Start", customButton))
+		if(GUI.Button (new Rect(Screen.width / 4 , Screen.height*1/4.5f, width, height*1.75f), "Start", customButton))
 		{
 			Application.LoadLevel("GameScene");
 		}
 		
-		if(GUI.Button (new Rect(Screen.width / 4 , Screen.height/2.5f, width, height), "High Score", customButton))
+		if(GUI.Button (new Rect(Screen.width / 4 , Screen.height*1.75f/4.5f, width, height*1.75f), "High Score", customButton))
 		{
 			Application.LoadLevel("HighScoreScene");
 		}
 		
-		if(GUI.Button (new Rect(Screen.width / 4 , Screen.height/1.8f, width, height), "Weather", customButton))
+		if(GUI.Button (new Rect(Screen.width / 4 , Screen.height*2.5f/4.5f, width, height*1.75f), "Weather", customButton))
 		{
 			Application.LoadLevel("WeatherScene");
 		}
-
-		if(GUI.Button (new Rect(Screen.width / 4 , Screen.height/1.4f, width, height), "Settings", customButton))
+		
+		if(GUI.Button (new Rect(Screen.width / 4 , Screen.height*3.25f/4.5f, width, height*1.75f), "Settings", customButton))
 		{
 			Application.LoadLevel("SettingsScene");
 		}
-
-		if(GUI.Button (new Rect(Screen.width / 16 , Screen.height/1.1f , width/3, height), "TW"))
+		
+		/*if(GUI.Button (new Rect(Screen.width / 16 , Screen.height/1.1f , width/3, height), "TW"))
 		{
 			
 		}
@@ -50,7 +50,7 @@ public class TitleScreenScript : MonoBehaviour {
 		if(GUI.Button (new Rect(Screen.width / 3.8f  , Screen.height/1.1f , width/3, height), "FB"))
 		{
 			
-		}
+		}*/
 	}
 	
 }
