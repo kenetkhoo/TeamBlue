@@ -12,12 +12,10 @@ public class DisplayWeatherScript : MonoBehaviour
 	public float Fahrenheit;
 	public float Celsius;
 	public string temp;
-	public string retrievedCoordinates;
-	public string retrievedCoordinates2;
 	public string retrievedCity;
-	public int conditionID;
+	public int weatherID;
 	public string conditionName;
-	
+		
 	// Use this for initialization
 	void Start ()
 	{
@@ -28,6 +26,7 @@ public class DisplayWeatherScript : MonoBehaviour
 	
 	IEnumerator SendRequest()
 	{
+	/*
 		//opens a connection and gets the player IP, City, Country
 		Network.Connect("http://google.com");
 		currentIP = Network.player.externalIP;
@@ -45,10 +44,13 @@ public class DisplayWeatherScript : MonoBehaviour
         {
             Debug.Log("WWW error: " + cityRequest.error);
         }
+	*/
 		
-		//get the current weather
-        WWW request = new WWW("http://api.openweathermap.org/data/2.5/weather?q=" + currentCity); 
-		//search by lat and long api.openweathermap.org/data/2.5/weather?lat=??&lon=??
+		GPS g = GetComponent<GPS>();
+		
+		//get the current weather; search by lat and lon api.openweathermap.org/data/2.5/weather?lat=??&lon=??
+		WWW request = new WWW("api.openweathermap.org/data/2.5/weather?lat=" + g.lat + "&lon=" + g.lon); 
+        //WWW request = new WWW("http://api.openweathermap.org/data/2.5/weather?q=" + currentCity); 
         yield return request;
 		
 		if (request.error == null || request.error == "")
@@ -63,13 +65,13 @@ public class DisplayWeatherScript : MonoBehaviour
 		}
 		else
         {
-            Debug.Log("WWW error: " + request.error);
+            Debug.Log("Cannot get GPS location: " + request.error);
         }
 	}
 	
 	void OnGUI()
 	{
-		GUI.Label(new Rect(Screen.width / 2.0f , Screen.height/5.5f, width, height),  Celsius.ToString() + "C");
+		GUI.Label(new Rect(Screen.width / 2.0f , Screen.height/5.5f, width, height), Celsius.ToString() + "C");
 		GUI.Label(new Rect(Screen.width / 3.5f , Screen.height/5.5f, width, height), Fahrenheit.ToString() + "F");
     }
 }
