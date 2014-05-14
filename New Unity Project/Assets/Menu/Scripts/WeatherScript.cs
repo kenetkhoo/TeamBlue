@@ -82,6 +82,7 @@ public class WeatherScript : MonoBehaviour
         {
             Debug.Log("Cannot get GPS location: " + request.error);
         }
+		
 	}
 	
 	void OnGUI()
