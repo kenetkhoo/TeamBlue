@@ -39,10 +39,10 @@
 	<Reference Include="System.Core" />
 	<Reference Include="System.Xml.Linq" />
 	<Reference Include="UnityEngine">
-	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
+	  <HintPath>D:/NewApps/Editor/Data/Managed/UnityEngine.dll</HintPath>
 	</Reference>
 	<Reference Include="UnityEditor">
-	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
+	  <HintPath>D:/NewApps/Editor/Data/Managed/UnityEditor.dll</HintPath>
 	</Reference>
   </ItemGroup>
   <ItemGroup>
@@ -58,7 +58,6 @@
      <Compile Include="Assets\Menu\Scripts\BackToMenuScript.cs" />
      <Compile Include="Assets\Menu\Scripts\DisplayWeatherScript.cs" />
      <Compile Include="Assets\Menu\Scripts\ExpandText.cs" />
-     <Compile Include="Assets\Menu\Scripts\GPS.cs" />
      <Compile Include="Assets\Menu\Scripts\GradientBackgroundForCamera.cs" />
      <Compile Include="Assets\Menu\Scripts\HighScoreToMenuScript.cs" />
      <Compile Include="Assets\Menu\Scripts\TitleScreenScript.cs" />

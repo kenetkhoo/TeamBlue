@@ -83,6 +83,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 65227321}
   - 114: {fileID: 65227320}
+  - 114: {fileID: 65227322}
   m_Layer: 0
   m_Name: Weather
   m_TagString: Untagged
@@ -114,6 +115,30 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
+--- !u!114 &65227322
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 65227319}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e76f616f0a582648b07502ee28d7c20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lon: 0
+  lat: 0
+  retrievedCoordinates: 
+  retrievedCoordinates2: 
+  retrievedCitys: 
+  currentIP: 
+  currentCity: 
+  Fahrenheit: 0
+  Celsius: 0
+  temp: 
+  retrievedCity: 
+  weatherID: 0
+  conditionName: 
 --- !u!1 &574655764
 GameObject:
   m_ObjectHideFlags: 0
