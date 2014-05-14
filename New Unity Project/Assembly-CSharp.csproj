@@ -39,10 +39,10 @@
 	<Reference Include="System.Core" />
 	<Reference Include="System.Xml.Linq" />
 	<Reference Include="UnityEngine">
-	  <HintPath>D:/NewApps/Editor/Data/Managed/UnityEngine.dll</HintPath>
+	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
 	</Reference>
 	<Reference Include="UnityEditor">
-	  <HintPath>D:/NewApps/Editor/Data/Managed/UnityEditor.dll</HintPath>
+	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
 	</Reference>
   </ItemGroup>
   <ItemGroup>
@@ -56,11 +56,11 @@
      <Compile Include="Assets\Gameplay\Scripts\SpawnScript.cs" />
      <Compile Include="Assets\JSON Tests\CSharp\Test_CSharp.cs" />
      <Compile Include="Assets\Menu\Scripts\BackToMenuScript.cs" />
-     <Compile Include="Assets\Menu\Scripts\DisplayWeatherScript.cs" />
      <Compile Include="Assets\Menu\Scripts\ExpandText.cs" />
      <Compile Include="Assets\Menu\Scripts\GradientBackgroundForCamera.cs" />
      <Compile Include="Assets\Menu\Scripts\HighScoreToMenuScript.cs" />
      <Compile Include="Assets\Menu\Scripts\TitleScreenScript.cs" />
+     <Compile Include="Assets\Menu\Scripts\WeatherScript.cs" />
      <Compile Include="Assets\Menu\Scripts\highScoreScript.cs" />
      <Compile Include="Assets\Menu\Scripts\rotateCloud.cs" />
      <None Include="Assets\JSON Tests\TroubleShoot.txt" />

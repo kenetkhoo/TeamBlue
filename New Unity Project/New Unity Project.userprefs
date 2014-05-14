@@ -1,9 +1,8 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Menu\Scripts\DisplayWeatherScript.cs">
+  <MonoDevelop.Ide.Workspace />
+  <MonoDevelop.Ide.Workbench ActiveDocument="..\..\..\Pj1\Assets\Sprite\NewBehaviourScript.cs">
     <Files>
-      <File FileName="Assets\Menu\Scripts\DisplayWeatherScript.cs" Line="94" Column="78" />
-      <File FileName="Assets\plugins\GPS.cs" Line="10" Column="2" />
+      <File FileName="..\..\..\Pj1\Assets\Sprite\NewBehaviourScript.cs" Line="16" Column="2" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

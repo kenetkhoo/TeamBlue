@@ -2,11 +2,12 @@
 using System.Collections;
 using SimpleJSON;
 
-public class DisplayWeatherScript : MonoBehaviour 
+public class WeatherScript : MonoBehaviour 
 {
 	float width;
 	float height;
 
+	GUITexture myWeatherCondition;
 	public float lon;
 	public float lat;
 	public string retrievedCoordinates;
@@ -17,9 +18,11 @@ public class DisplayWeatherScript : MonoBehaviour
 	public float Fahrenheit;
 	public float Celsius;
 	public string temp;
-	public string retrievedCity;
+	public string City;
 	public int weatherID;
-	public string conditionName;
+	public string Description;
+    public string Country;
+	public string image; 
 		
 	// Use this for initialization
 	IEnumerator Start ()
@@ -55,30 +58,7 @@ public class DisplayWeatherScript : MonoBehaviour
 	
 	IEnumerator SendRequest()
 	{
-	/*
-		//opens a connection and gets the player IP, City, Country
-		Network.Connect("http://google.com");
-		currentIP = Network.player.externalIP;
-		Network.Disconnect();
-		
-		WWW cityRequest = new WWW("http://www.geoplugin.net/json.gp?ip=" + currentIP); //get our location info
-        yield return cityRequest;
-		
-		if (cityRequest.error == null || cityRequest.error == "")
-		{
-			var N = JSON.Parse(cityRequest.text);
-			currentCity = N["geoplugin_city"].Value;
-		}
-		else
-        {
-            Debug.Log("WWW error: " + cityRequest.error);
-        }
-	*/
-		
-
-		//get the current weather; search by lat and lon api.openweathermap.org/data/2.5/weather?lat=??&lon=??
 		WWW request = new WWW("http://api.openweathermap.org/data/2.5/weather?lat=" + lat + "&lon=" + lon); 
-        //WWW request = new WWW("http://api.openweathermap.org/data/2.5/weather?q=" + currentCity); 
         yield return request;
 		
 		if (request.error == null || request.error == "")
@@ -86,13 +66,17 @@ public class DisplayWeatherScript : MonoBehaviour
 			var N = JSON.Parse(request.text);
 			retrievedCoordinates = N["coord"]["lon"].Value; //longitude
 			retrievedCoordinates2 = N["coord"]["lat"].Value; //longitude
-			retrievedCitys = N["name"].Value; //get the city
-			print (retrievedCitys);
+			City = N["name"].Value; //get the city
+			Country = N["sys"]["country"].Value; //get the country
+			print (City);
 			temp = N["main"]["temp"].Value; //get the temperature
             float tempTemp; //variable to hold the parsed temperature
             float.TryParse(temp, out tempTemp); //parse the temperature
 			Fahrenheit = Mathf.Round((tempTemp - 273.0f)*(float)1.8)+32; //Fahrenheit 
             Celsius  = Mathf.Round((tempTemp - 273.0f)*10)/10; //Celsius 
+			int.TryParse(N["weather"][0]["id"].Value, out weatherID); //weather ID
+			Description = N["weather"][0]["description"].Value; //weather's description 
+			image = N["weather"][0]["icon"].Value; 
 		}
 		else
         {
@@ -103,6 +87,8 @@ public class DisplayWeatherScript : MonoBehaviour
 	void OnGUI()
 	{
 	//	GUI.Label(new Rect(Screen.width / 2.0f , Screen.height/5.5f, width, height), Celsius.ToString() + "C");
-		GUI.Label(new Rect(Screen.width / 6.5f , Screen.height/5.5f, width, height), Fahrenheit.ToString() + "F" + Celsius.ToString() + "C" + " " +retrievedCitys + " " + lon +"lon" + lat+ "lat");
+		GUI.contentColor = Color.black; 
+		GUI.Label(new Rect(Screen.width / 3.5f , Screen.height/8.0f, width, height*6), "\n" + Fahrenheit.ToString() + "F" + " " + Celsius.ToString() + "C" 
+				  + "\n" + Description + "\n" + City+ ", " + Country +"\n" + lon +" lon" + " " + lat+ " lat");
     }
 }
