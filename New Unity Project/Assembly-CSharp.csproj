@@ -62,6 +62,7 @@
      <Compile Include="Assets\Menu\Scripts\GradientBackgroundForCamera.cs" />
      <Compile Include="Assets\Menu\Scripts\HighScoreToMenuScript.cs" />
      <Compile Include="Assets\Menu\Scripts\TitleScreenScript.cs" />
+     <Compile Include="Assets\Menu\Scripts\highScoreScript.cs" />
      <Compile Include="Assets\Menu\Scripts\rotateCloud.cs" />
      <None Include="Assets\JSON Tests\TroubleShoot.txt" />
  <Reference Include="ICSharpCode.SharpZipLib">

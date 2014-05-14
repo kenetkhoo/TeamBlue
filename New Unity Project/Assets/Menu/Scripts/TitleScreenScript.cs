@@ -5,6 +5,7 @@ public class TitleScreenScript : MonoBehaviour {
 	float width;
 	float height;
 	public Texture2D image;
+	public AudioClip buttonsound;
 	GUIContent content = new GUIContent();
 	public GUIStyle customButton;
 	// Use this for initialization
@@ -25,21 +26,29 @@ public class TitleScreenScript : MonoBehaviour {
 		customButton.fixedWidth = width;
 		if(GUI.Button (new Rect(Screen.width / 4 , Screen.height*1/4.5f, width, height*1.75f), "Start", customButton))
 		{
+			audio.clip = buttonsound;
+			audio.Play();
 			Application.LoadLevel(scene);
 		}
 		
 		if(GUI.Button (new Rect(Screen.width / 4 , Screen.height*1.75f/4.5f, width, height*1.75f), "High Score", customButton))
 		{
+			audio.clip = buttonsound;
+			audio.Play();
 			Application.LoadLevel("HighScoreScene");
 		}
 		
 		if(GUI.Button (new Rect(Screen.width / 4 , Screen.height*2.5f/4.5f, width, height*1.75f), "Weather", customButton))
 		{
+			audio.clip = buttonsound;
+			audio.Play();
 			Application.LoadLevel("WeatherScene");
 		}
 		
 		if(GUI.Button (new Rect(Screen.width / 4 , Screen.height*3.25f/4.5f, width, height*1.75f), "Settings", customButton))
 		{
+			audio.clip = buttonsound;
+			audio.Play();
 			Application.LoadLevel("SettingsScene");
 		}
 		

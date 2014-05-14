@@ -37,7 +37,7 @@
 -define:UNITY_4_3_4
 -define:UNITY_4_3
 -define:CROSS_PLATFORM_INPUT
--r:D:/NewApps/Editor/Data/PlaybackEngines/AndroidPlayer/Managed/UnityEngine.dll
+-r:"C:/Program Files (x86)/Unity/Editor/Data/PlaybackEngines/AndroidPlayer/Managed/UnityEngine.dll"
 -r:Library/ScriptAssemblies/Assembly-CSharp-firstpass.dll
 -r:Assets/plugins/ICSharpCode.SharpZipLib.dll
 "Assets/JSON Tests/UnityScript/Test_UnityScript.js"
