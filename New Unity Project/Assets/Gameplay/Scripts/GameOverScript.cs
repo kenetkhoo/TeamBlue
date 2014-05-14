@@ -24,7 +24,7 @@ public class GameOverScript : MonoBehaviour {
 		GUI.Label (new Rect (Screen.width / 4, Screen.height/6, width, height), "Score: " + score);
 		if(GUI.Button (new Rect(Screen.width / 4, Screen.height/4, width, height), content))
 		{
-			Application.LoadLevel("GameScene");
+			Application.LoadLevel("SunnyScene");
 		}
 		if(GUI.Button (new Rect(Screen.width / 4, Screen.height/2.5f, width, height), "Menu"))
 		{

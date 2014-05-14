@@ -19,12 +19,13 @@ public class TitleScreenScript : MonoBehaviour {
 	// Update is called once per frame
 	void OnGUI()
 	{
+		string scene = "SunnyScene";
 		customButton.fontSize = Mathf.RoundToInt (Screen.height / 25f);
 		customButton.fixedHeight = height*2.8f;
 		customButton.fixedWidth = width;
 		if(GUI.Button (new Rect(Screen.width / 4 , Screen.height*1/4.5f, width, height*1.75f), "Start", customButton))
 		{
-			Application.LoadLevel("GameScene");
+			Application.LoadLevel(scene);
 		}
 		
 		if(GUI.Button (new Rect(Screen.width / 4 , Screen.height*1.75f/4.5f, width, height*1.75f), "High Score", customButton))

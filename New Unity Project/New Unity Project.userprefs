@@ -1,16 +1,16 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Menu\Scripts\GPS.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Gameplay\Scripts\GameOverScript.cs">
     <Files>
+      <File FileName="Assets\Gameplay\Scripts\GameOverScript.cs" Line="10" Column="31" />
       <File FileName="Assets\Menu\Scripts\GPS.cs" Line="1" Column="1" />
       <File FileName="Assets\Menu\Scripts\GPS Script.js" Line="1" Column="1" />
-      <File FileName="Assets\Gameplay\Scripts\PlayerScript.cs" Line="1" Column="1" />
+      <File FileName="Assets\Gameplay\Scripts\PlayerScript.cs" Line="118" Column="1" />
       <File FileName="Assets\Menu\Scripts\TitleScreenScript.cs" Line="1" Column="1" />
       <File FileName="Assets\Menu\Scripts\BackToMenuScript.cs" Line="1" Column="1" />
-      <File FileName="Assets\Gameplay\Scripts\GameOverScript.cs" Line="1" Column="1" />
+      <File FileName="Assets\Gameplay\Scripts\GameOverScript.cs" Line="35" Column="1" />
       <File FileName="Assets\Menu\Scripts\ExpandText.cs" Line="1" Column="1" />
-      <File FileName="Assets\Menu\Scripts\DisplayWeatherScript.cs" Line="46" Column="58" />
-      <File FileName="Assets\Menu\Scripts\GPS.cs" Line="36" Column="1" />
+      <File FileName="Assets\Menu\Scripts\DisplayWeatherScript.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

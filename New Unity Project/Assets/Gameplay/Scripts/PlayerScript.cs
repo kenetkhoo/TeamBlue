@@ -82,7 +82,7 @@ public class PlayerScript : MonoBehaviour {
 		}
 		//check if splash animation finished
 		if(dead && !(newParticleSystem.IsAlive()) )
-			Application.LoadLevel (2);
+			Application.LoadLevel ("GameOverScene");
 		
 	}
 	
