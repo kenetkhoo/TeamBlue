@@ -1,0 +1,60 @@
+-debug
+-target:library
+-nowarn:0169
+-out:Temp/Assembly-CSharp.dll
+-r:"C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEngine.dll"
+-r:Library/ScriptAssemblies/Assembly-CSharp-firstpass.dll
+-r:Assets/plugins/ICSharpCode.SharpZipLib.dll
+-r:"C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEditor.dll"
+-define:UNITY_ANDROID
+-define:ENABLE_MICROPHONE
+-define:ENABLE_TEXTUREID_MAP
+-define:ENABLE_AUDIO_FMOD
+-define:ENABLE_MONO
+-define:ENABLE_SPRITES
+-define:ENABLE_TERRAIN
+-define:ENABLE_GENERICS
+-define:ENABLE_SUBSTANCE
+-define:INCLUDE_WP8SUPPORT
+-define:ENABLE_WWW
+-define:ENABLE_IMAGEEFFECTS
+-define:ENABLE_WEBCAM
+-define:INCLUDE_METROSUPPORT
+-define:RENDER_SOFTWARE_CURSOR
+-define:ENABLE_NETWORK
+-define:ENABLE_PHYSICS
+-define:ENABLE_CACHING
+-define:ENABLE_CLOTH
+-define:UNITY_ANDROID_API
+-define:ENABLE_2D_PHYSICS
+-define:ENABLE_SHADOWS
+-define:ENABLE_AUDIO
+-define:ENABLE_NAVMESH_CARVING
+-define:ENABLE_SINGLE_INSTANCE_BUILD_SETTING
+-define:UNITY_4_3_4
+-define:UNITY_4_3
+-define:ENABLE_PROFILER
+-define:UNITY_EDITOR
+-define:UNITY_EDITOR_WIN
+-define:CROSS_PLATFORM_INPUT
+Assets/Gameplay/Scripts/DestroyerScript.cs
+Assets/Gameplay/Scripts/GameOverScript.cs
+Assets/Gameplay/Scripts/HUDScript.cs
+Assets/Gameplay/Scripts/MoveScript.cs
+Assets/Gameplay/Scripts/ObjScript.cs
+Assets/Gameplay/Scripts/PlayerScript.cs
+Assets/Gameplay/Scripts/ScrollScript.cs
+Assets/Gameplay/Scripts/SpawnScript.cs
+"Assets/JSON Tests/CSharp/Test_CSharp.cs"
+Assets/Menu/Scripts/BackToMenuScript.cs
+Assets/Menu/Scripts/DisplayWeatherScript.cs
+Assets/Menu/Scripts/ExpandText.cs
+Assets/Menu/Scripts/GPS.cs
+Assets/Menu/Scripts/GradientBackgroundForCamera.cs
+Assets/Menu/Scripts/HighScoreToMenuScript.cs
+Assets/Menu/Scripts/TitleScreenScript.cs
+Assets/Menu/Scripts/WeatherScript.cs
+Assets/Menu/Scripts/highScoreScript.cs
+Assets/Menu/Scripts/rotateCloud.cs
+-r:"C:/Program Files (x86)/Unity/Editor/Data/Mono\lib/mono/unity\System.Runtime.Serialization.dll"
+-r:"C:/Program Files (x86)/Unity/Editor/Data/Mono\lib/mono/unity\System.Xml.Linq.dll"
