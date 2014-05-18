@@ -13,6 +13,7 @@ public class PlayerScript : MonoBehaviour {
 	public ParticleSystem splashEffect;
 	public Sprite falling;
 	public Sprite normal;
+	public float wind = 0;
 	// 2 - Store the movement;
 	private Vector2 movement;
 	
@@ -32,7 +33,7 @@ public class PlayerScript : MonoBehaviour {
 			bool inputY = Input.GetKey ("z");
 			// 4 - Movement per direction
 			movement = new Vector2 (
-				speed.x * inputX,
+				speed.x * inputX + wind,
 				0);
 			if(facingRight && movement.x < 0)
 				Flip ();
@@ -99,6 +100,7 @@ public class PlayerScript : MonoBehaviour {
 					Quaternion.identity
 					) as ParticleSystem;
 				dead = true;
+				audio.Play ();
 				Destroy(gameObject.collider2D);
 				Destroy(gameObject.rigidbody2D);
 				Destroy(gameObject.renderer);

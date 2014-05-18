@@ -126,11 +126,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e76f616f0a582648b07502ee28d7c20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lon: 0
-  lat: 0
-  retrievedCoordinates: 
-  retrievedCoordinates2: 
-  retrievedCitys: 
   currentIP: 
   currentCity: 
   Fahrenheit: 0
@@ -521,7 +516,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: .44600001
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Priority: 128
   DopplerLevel: 1
