@@ -7,7 +7,6 @@ public class WeatherScript : MonoBehaviour
 	float width;
 	float height;
 
-	GUITexture myWeatherCondition;
 	public float lon;
 	public float lat;
 	public string retrievedCoordinates;
@@ -23,6 +22,8 @@ public class WeatherScript : MonoBehaviour
 	public string Description;
     public string Country;
 	public string image; 
+	
+	
 		
 	// Use this for initialization
 	IEnumerator Start ()
@@ -44,11 +45,9 @@ public class WeatherScript : MonoBehaviour
 			print("Unable to determine device location");
 			yield break;
 		} else{
-			
 			lat = Input.location.lastData.latitude;
 			lon = Input.location.lastData.longitude; 
 			print("Location: " + lat + " " + lon + " " + Input.location.lastData.altitude + " " + Input.location.lastData.horizontalAccuracy + " " + Input.location.lastData.timestamp);
-			//print("Location: " + Input.location.lastData.latitude + " " + Input.location.lastData.longitude + " " + Input.location.lastData.altitude + " " + Input.location.lastData.horizontalAccuracy + " " + Input.location.lastData.timestamp);
 		}
 		Input.location.Stop();
 		width = ((Screen.width / 2) * Camera.main.pixelWidth) / Screen.width;
@@ -56,13 +55,11 @@ public class WeatherScript : MonoBehaviour
 		StartCoroutine(SendRequest());
 	}
 	
-	IEnumerator SendRequest()
-	{
+	IEnumerator SendRequest(){
 		WWW request = new WWW("http://api.openweathermap.org/data/2.5/weather?lat=" + lat + "&lon=" + lon); 
         yield return request;
 		
-		if (request.error == null || request.error == "")
-		{
+		if (request.error == null || request.error == ""){
 			var N = JSON.Parse(request.text);
 			retrievedCoordinates = N["coord"]["lon"].Value; //longitude
 			retrievedCoordinates2 = N["coord"]["lat"].Value; //longitude
@@ -78,18 +75,17 @@ public class WeatherScript : MonoBehaviour
 			Description = N["weather"][0]["description"].Value; //weather's description 
 			image = N["weather"][0]["icon"].Value; 
 		}
-		else
-        {
+		else{
             Debug.Log("Cannot get GPS location: " + request.error);
         }
 		
 	}
-	
-	void OnGUI()
-	{
-	//	GUI.Label(new Rect(Screen.width / 2.0f , Screen.height/5.5f, width, height), Celsius.ToString() + "C");
+
+	void OnGUI(){
+		var myStyl = new GUIStyle();
+		myStyl.fontSize = 20;
 		GUI.contentColor = Color.black; 
-		GUI.Label(new Rect(Screen.width / 3.5f , Screen.height/8.0f, width, height*6), "\n" + Fahrenheit.ToString() + "F" + " " + Celsius.ToString() + "C" 
-				  + "\n" + Description + "\n" + City+ ", " + Country +"\n" + lon +" lon" + " " + lat+ " lat");
+		GUI.Label(new Rect(Screen.width / 5.5f , Screen.height/8.7f, width, height*6), "\n" + Fahrenheit.ToString() + "F" + " " + Celsius.ToString() + "C" 
+				  + "\n" + Description.ToString() + "\n" + City.ToString()+ ", " + Country.ToString() +"\n" + lon +" lon" + " " + lat+ " lat", myStyl);
     }
 }
