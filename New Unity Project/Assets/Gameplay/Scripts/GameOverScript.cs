@@ -8,6 +8,8 @@ public class GameOverScript : MonoBehaviour {
 	float height;
 	public Texture2D image;
 	GUIContent content = new GUIContent();
+	public AudioClip buttonsound;
+	public GUIStyle customButton;
 	void Start () {
 		width = ((Screen.width / 2) * Camera.main.pixelWidth) / Screen.width;
 		height =  ((Screen.height/ 10) * Camera.main.pixelHeight) / Screen.height;
@@ -36,12 +38,23 @@ public class GameOverScript : MonoBehaviour {
 		GUI.Label (new Rect (Screen.width / 4 , Screen.height/10, width*2, height), "GAME OVER");
 		
 		GUI.Label (new Rect (Screen.width / 4, Screen.height/6, width, height), "Score: " + score);
-		if(GUI.Button (new Rect(Screen.width / 4, Screen.height/4, width, height), content))
+
+		customButton.fontSize = Mathf.RoundToInt (Screen.height / 25f);
+		customButton.fixedHeight = height*2.8f;
+		customButton.fixedWidth = width;
+		if(GUI.Button (new Rect(Screen.width / 4 , Screen.height*1/4.5f, width, height*1.75f), "Retry", customButton))
 		{
+			audio.Stop();
+			audio.clip = buttonsound;
+			audio.Play();
 			Application.LoadLevel("SunnyScene");
 		}
-		if(GUI.Button (new Rect(Screen.width / 4, Screen.height/2.5f, width, height), "Menu"))
+		
+		if(GUI.Button (new Rect(Screen.width / 4 , Screen.height*1.75f/4.5f, width, height*1.75f), "Main Menu", customButton))
 		{
+			audio.Stop ();
+			audio.clip = buttonsound;
+			audio.Play();
 			Application.LoadLevel("TitleScene");
 		}
 	}

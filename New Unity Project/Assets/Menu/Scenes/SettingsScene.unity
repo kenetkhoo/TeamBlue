@@ -101,6 +101,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67393b0c834cc0b458c167101efeb5de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SliderSkin: {fileID: 11400000, guid: 2cb91524a938e4242ad8ef3facb67a8b, type: 2}
 --- !u!4 &73460490
 Transform:
   m_ObjectHideFlags: 0
