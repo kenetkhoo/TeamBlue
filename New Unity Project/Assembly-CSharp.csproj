@@ -62,6 +62,7 @@
      <Compile Include="Assets\Menu\Scripts\GPS.cs" />
      <Compile Include="Assets\Menu\Scripts\GradientBackgroundForCamera.cs" />
      <Compile Include="Assets\Menu\Scripts\HighScoreToMenuScript.cs" />
+     <Compile Include="Assets\Menu\Scripts\SliderScript.cs" />
      <Compile Include="Assets\Menu\Scripts\TitleScreenScript.cs" />
      <Compile Include="Assets\Menu\Scripts\WeatherScript.cs" />
      <Compile Include="Assets\Menu\Scripts\highScoreScript.cs" />

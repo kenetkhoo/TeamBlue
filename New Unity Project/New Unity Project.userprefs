@@ -1,10 +1,12 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Gameplay\Scripts\MoveScript.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Menu\Scripts\SliderScript.cs">
     <Files>
-      <File FileName="Assets\Gameplay\Scripts\PlayerScript.cs" Line="18" Column="27" />
+      <File FileName="Assets\Gameplay\Scripts\PlayerScript.cs" Line="1" Column="1" />
       <File FileName="Assets\Gameplay\Scripts\MoveScript.cs" Line="1" Column="1" />
       <File FileName="Assets\Gameplay\Scripts\SpawnScript.cs" Line="1" Column="1" />
+      <File FileName="Assets\Menu\Scripts\SliderScript.cs" Line="19" Column="36" />
+      <File FileName="Assets\Menu\Scripts\TitleScreenScript.cs" Line="13" Column="11" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
