@@ -2,10 +2,8 @@
 using System.Collections;
 using SimpleJSON;
 
-public class WeatherScript : MonoBehaviour 
+public class Weather2Script : MonoBehaviour 
 {
-	float width;
-	float height;
 	
 	public float lon;
 	public float lat;
@@ -20,7 +18,7 @@ public class WeatherScript : MonoBehaviour
 	public string City;
 	public int weatherID;
 	public string Description;
-	public string Country;
+	public string Country; 
 	public new string name;
 	
 	
@@ -49,14 +47,12 @@ public class WeatherScript : MonoBehaviour
 			print("Location: " + lat + " " + lon + " " + Input.location.lastData.altitude + " " + Input.location.lastData.horizontalAccuracy + " " + Input.location.lastData.timestamp);
 		}
 		Input.location.Stop();
-		width = ((Screen.width / 2) * Camera.main.pixelWidth) / Screen.width;
-		height =  ((Screen.height/ 10) * Camera.main.pixelHeight) / Screen.height;
 		name = PlayerPrefs.GetString("cityName");
 		StartCoroutine(SendRequest());
 	}
 	
 	IEnumerator SendRequest()
-	{
+	{	
 		if(name == null)
 		{//uses the phone's GPS to retrieve the information
 			WWW request = new WWW("http://api.openweathermap.org/data/2.5/weather?lat=" + lat + "&lon=" + lon); 
@@ -78,15 +74,14 @@ public class WeatherScript : MonoBehaviour
 				Description = N["weather"][0]["description"].Value; //weather's description 
 			}
 		}
-		else if (name!= null)
+		else if (name != null)
 		{ //uses the user's input to retrieve the information 
 			WWW request = new WWW("http://api.openweathermap.org/data/2.5/weather?q=" + name); 
 			yield return request;
 			
-			if (request.error == null || request.error == ""){
+			if (request.error == null || request.error == "")
+			{
 				var N = JSON.Parse(request.text);
-				retrievedCoordinates = N["coord"]["lon"].Value; //longitude
-				retrievedCoordinates2 = N["coord"]["lat"].Value; //longitude
 				City = N["name"].Value; //get the city
 				Country = N["sys"]["country"].Value; //get the country
 				print (City);
@@ -96,6 +91,7 @@ public class WeatherScript : MonoBehaviour
 				Fahrenheit = Mathf.Round((tempTemp - 273.0f)*(float)1.8)+32; //Fahrenheit 
 				Celsius  = Mathf.Round((tempTemp - 273.0f)*10)/10; //Celsius 
 				int.TryParse(N["weather"][0]["id"].Value, out weatherID); //weather ID
+				PlayerPrefs.SetInt("weatherID", weatherID);
 				Description = N["weather"][0]["description"].Value; //weather's description 
 			}
 		}
@@ -104,14 +100,5 @@ public class WeatherScript : MonoBehaviour
 			//default scene  
 			Application.LoadLevel("SunnyScene");
 		}
-	}
-	
-	void OnGUI()
-	{
-		var myStyl = new GUIStyle();
-		myStyl.fontSize = 20;
-		GUI.contentColor = Color.black; 
-		GUI.Label(new Rect(Screen.width / 5.5f , Screen.height/8.7f, width, height*6), "\n" + Fahrenheit.ToString() + "F" + " " + Celsius.ToString() + "C" 
-		          + "\n" + Description.ToString() + "\n" + City.ToString()+ ", " + Country.ToString() +"\n" + lon +" lon" + " " + lat+ " lat", myStyl);
 	}
 }
