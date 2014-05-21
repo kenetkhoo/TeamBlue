@@ -184,7 +184,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cityName: 
-  tempString: 
 --- !u!1 &754297366
 GameObject:
   m_ObjectHideFlags: 0
