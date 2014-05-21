@@ -75,10 +75,11 @@ public class WeatherScript : MonoBehaviour
 			Description = N["weather"][0]["description"].Value; //weather's description 
 			image = N["weather"][0]["icon"].Value; 
 		}
-		else{
-            Debug.Log("Cannot get GPS location: " + request.error);
-        }
-		
+		else
+		{
+			//default scene 
+            Application.LoadLevel("SunnyScene");
+        }		
 	}
 
 	void OnGUI(){
