@@ -74,11 +74,28 @@ public class WeatherScript : MonoBehaviour
 			int.TryParse(N["weather"][0]["id"].Value, out weatherID); //weather ID
 			Description = N["weather"][0]["description"].Value; //weather's description 
 			image = N["weather"][0]["icon"].Value; 
+
+			if(weatherID > 200 && weatherID <= 522 || weatherID == 804)
+			{ //thunderstorm, drizzle, and rain 
+				TitleScreenScript.scene = "RainyScene";
+			}
+			else if(weatherID > 600 && weatherID <= 621)
+			{ //snow
+				TitleScreenScript.scene = "SnowyScene";
+			}
+			else if (weatherID == 905)
+			{//windy 
+				TitleScreenScript.scene = "WindyScene";
+			}
+			else
+			{//sunny as default 
+				TitleScreenScript.scene = "SunnyScene";
+			}
 		}
 		else
 		{
 			//default scene 
-            Application.LoadLevel("SunnyScene");
+			TitleScreenScript.scene = "SunnyScene";
         }		
 	}
 

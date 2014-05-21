@@ -47,7 +47,7 @@ public class GameOverScript : MonoBehaviour {
 			audio.Stop();
 			audio.clip = buttonsound;
 			audio.Play();
-			Application.LoadLevel("SunnyScene");
+			Application.LoadLevel(TitleScreenScript.scene);
 		}
 		
 		if(GUI.Button (new Rect(Screen.width / 4 , Screen.height*1.75f/4.5f, width, height*1.75f), "Main Menu", customButton))
