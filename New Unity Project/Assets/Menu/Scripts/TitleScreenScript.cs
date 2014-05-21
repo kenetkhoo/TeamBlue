@@ -8,8 +8,7 @@ public class TitleScreenScript : MonoBehaviour {
 	public AudioClip buttonsound;
 	GUIContent content = new GUIContent();
 	public GUIStyle customButton;
-	public static string scene;
-
+	private WeatherScript id;
 		
 	// Use this for initialization
 	void Start () {
@@ -20,19 +19,33 @@ public class TitleScreenScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void OnGUI(){
+		id = GetComponent<WeatherScript>();
+		
+		string scene = "SunnyScene";
 		customButton.fontSize = Mathf.RoundToInt (Screen.height / 25f);
 		customButton.fixedHeight = height*2.8f;
 		customButton.fixedWidth = width;
-		if (scene == null)
-		{
-			scene = "SunnyScene";
-		}
 		if(GUI.Button (new Rect(Screen.width / 4 , Screen.height*1/4.5f, width, height*1.75f), "Start", customButton))
 		{
 			audio.clip = buttonsound;
 			audio.Play();
-			Application.LoadLevel(scene);
-
+			
+			if(id.weatherID > 200 && id.weatherID <= 522 || id.weatherID == 804)
+			{ //thunderstorm, drizzle, and rain 
+				Application.LoadLevel("RainyScene");
+			}
+			else if(id.weatherID > 600 && id.weatherID <= 621)
+			{ //snow
+				Application.LoadLevel("SnowyScene");
+			}
+			else if (id.weatherID == 905)
+			{//windy 
+				Application.LoadLevel("WindyScene");
+			}
+			else
+			{//sunny as default 
+				Application.LoadLevel(scene);
+			}
 		}
 		
 		if(GUI.Button (new Rect(Screen.width / 4 , Screen.height*1.75f/4.5f, width, height*1.75f), "High Score", customButton))
