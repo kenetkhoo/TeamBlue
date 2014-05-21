@@ -86,7 +86,7 @@ public class WeatherScript : MonoBehaviour
 		var myStyl = new GUIStyle();
 		myStyl.fontSize = 20;
 		GUI.contentColor = Color.black; 
-		GUI.Label(new Rect(Screen.width / 5.5f , Screen.height/8.7f, width, height*6), "\n" + Fahrenheit.ToString() + "F" + " " + Celsius.ToString() + "C" 
+		GUI.Label(new Rect(Screen.width / 3f , Screen.height/9.6f, width, height*6), "\n" + Fahrenheit.ToString() + "F" + " " + Celsius.ToString() + "C" 
 				  + "\n" + Description.ToString() + "\n" + City.ToString()+ ", " + Country.ToString() +"\n" + lon +" lon" + " " + lat+ " lat", myStyl);
     }
 }

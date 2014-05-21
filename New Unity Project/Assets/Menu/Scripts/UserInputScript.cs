@@ -18,7 +18,7 @@ public class UserInputScript : MonoBehaviour {
 	}
 	
 	void OnGUI() {
-		cityName  = GUI.TextField (new Rect (Screen.width / 5.0f, Screen.height / 2.0f, 200, 30), cityName);
+		cityName  = GUI.TextField (new Rect (Screen.width / 5.0f, Screen.height / 2.9f, 200, 30), cityName);
 			
 
 	}

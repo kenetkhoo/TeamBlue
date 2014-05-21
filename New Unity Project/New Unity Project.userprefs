@@ -1,9 +1,11 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Menu\Scripts\UserInputScript.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Menu\Scripts\ChooseWeatherScript.cs">
     <Files>
-      <File FileName="Assets\Menu\Scripts\UserInputScript.cs" Line="22" Column="4" />
-      <File FileName="Assets\Menu\Scripts\WeatherScript.cs" Line="9" Column="2" />
+      <File FileName="Assets\Menu\Scripts\TitleScreenScript.cs" Line="73" Column="4" />
+      <File FileName="Assets\Menu\Scripts\UserInputScript.cs" Line="21" Column="80" />
+      <File FileName="Assets\Menu\Scripts\WeatherScript.cs" Line="89" Column="38" />
+      <File FileName="Assets\Menu\Scripts\ChooseWeatherScript.cs" Line="46" Column="44" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

@@ -126,14 +126,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e76f616f0a582648b07502ee28d7c20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentIP: 
-  currentCity: 
-  Fahrenheit: 0
-  Celsius: 0
-  temp: 
-  retrievedCity: 
-  weatherID: 0
-  conditionName: 
 --- !u!1 &574655764
 GameObject:
   m_ObjectHideFlags: 0
@@ -362,6 +354,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63e7c42e954749c4d902c7d38ebcc33a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lon: 0
+  lat: 0
   image: {fileID: 0}
   buttonsound: {fileID: 8300000, guid: 40b2bbbb3da385247955a69a3566e4ce, type: 3}
   customButton:
