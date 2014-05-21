@@ -21,7 +21,7 @@ public class WeatherScript : MonoBehaviour
 	public int weatherID;
 	public string Description;
 	public string Country;
-	public new string name;
+	public new string cityName="";
 	
 	
 	// Use this for initialization
@@ -57,7 +57,7 @@ public class WeatherScript : MonoBehaviour
 	
 	IEnumerator SendRequest()
 	{
-		if(name == null)
+		if(cityName =="")
 		{//uses the phone's GPS to retrieve the information
 			WWW request = new WWW("http://api.openweathermap.org/data/2.5/weather?lat=" + lat + "&lon=" + lon); 
 			yield return request;
@@ -75,14 +75,15 @@ public class WeatherScript : MonoBehaviour
 				Fahrenheit = Mathf.Round((tempTemp - 273.0f)*(float)1.8)+32; //Fahrenheit 
 				Celsius  = Mathf.Round((tempTemp - 273.0f)*10)/10; //Celsius 
 				int.TryParse(N["weather"][0]["id"].Value, out weatherID); //weather ID
+				PlayerPrefs.SetInt("WID",weatherID);
 				Description = N["weather"][0]["description"].Value; //weather's description 
 			}
 		}
-		else if (name!= null)
+		else if (cityName!= "")
 		{ //uses the user's input to retrieve the information 
-			WWW request = new WWW("http://api.openweathermap.org/data/2.5/weather?q=" + name); 
+			WWW request = new WWW("http://api.openweathermap.org/data/2.5/weather?q=" + cityName); 
 			yield return request;
-			
+
 			if (request.error == null || request.error == ""){
 				var N = JSON.Parse(request.text);
 				retrievedCoordinates = N["coord"]["lon"].Value; //longitude
@@ -96,6 +97,7 @@ public class WeatherScript : MonoBehaviour
 				Fahrenheit = Mathf.Round((tempTemp - 273.0f)*(float)1.8)+32; //Fahrenheit 
 				Celsius  = Mathf.Round((tempTemp - 273.0f)*10)/10; //Celsius 
 				int.TryParse(N["weather"][0]["id"].Value, out weatherID); //weather ID
+				PlayerPrefs.SetInt("WID",weatherID);
 				Description = N["weather"][0]["description"].Value; //weather's description 
 			}
 		}
@@ -109,9 +111,20 @@ public class WeatherScript : MonoBehaviour
 	void OnGUI()
 	{
 		var myStyl = new GUIStyle();
-		myStyl.fontSize = 20;
+		myStyl.fontSize = Mathf.RoundToInt (Screen.height / 25f);
+		GUI.skin.button.fontSize = Mathf.RoundToInt (Screen.height / 30f);
 		GUI.contentColor = Color.black; 
 		GUI.Label(new Rect(Screen.width / 5.5f , Screen.height/8.7f, width, height*6), "\n" + Fahrenheit.ToString() + "F" + " " + Celsius.ToString() + "C" 
 		          + "\n" + Description.ToString() + "\n" + City.ToString()+ ", " + Country.ToString() +"\n" + lon +" lon" + " " + lat+ " lat", myStyl);
+		cityName  = GUI.TextField (new Rect (Screen.width / 5.0f, Screen.height / 1.9f,Screen.width/2.0f, Screen.height/15f), cityName);
+		//for computer
+		if ((Event.current.keyCode == KeyCode.Return )) {
+			StartCoroutine(SendRequest());
+		}
+		//for phones
+		if(GUI.Button (new Rect(Screen.width / 1.25f, Screen.height / 1.9f, Screen.width/9f,Screen.height/15f), "OK"))
+		{
+			StartCoroutine(SendRequest());
+		}
 	}
 }

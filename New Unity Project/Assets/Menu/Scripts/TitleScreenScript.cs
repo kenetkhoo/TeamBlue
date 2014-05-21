@@ -68,7 +68,7 @@ public class TitleScreenScript : MonoBehaviour {
 		{
 			audio.clip = buttonsound;
 			audio.Play();
-			
+			weatherID = PlayerPrefs.GetInt("WID");
 			/* display weather scene in game depending on weather code **/
 			
 			if(weatherID >= 200 && weatherID <= 523){

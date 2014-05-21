@@ -39,10 +39,10 @@
 	<Reference Include="System.Core" />
 	<Reference Include="System.Xml.Linq" />
 	<Reference Include="UnityEngine">
-	  <HintPath>D:/NewApps/Editor/Data/Managed/UnityEngine.dll</HintPath>
+	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
 	</Reference>
 	<Reference Include="UnityEditor">
-	  <HintPath>D:/NewApps/Editor/Data/Managed/UnityEditor.dll</HintPath>
+	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
 	</Reference>
   </ItemGroup>
   <ItemGroup>
@@ -65,6 +65,7 @@
      <Compile Include="Assets\Menu\Scripts\SliderScript.cs" />
      <Compile Include="Assets\Menu\Scripts\TitleScreenScript.cs" />
      <Compile Include="Assets\Menu\Scripts\UserInputScript.cs" />
+     <Compile Include="Assets\Menu\Scripts\Weather2Script.cs" />
      <Compile Include="Assets\Menu\Scripts\WeatherScript.cs" />
      <Compile Include="Assets\Menu\Scripts\highScoreScript.cs" />
      <Compile Include="Assets\Menu\Scripts\rotateCloud.cs" />
