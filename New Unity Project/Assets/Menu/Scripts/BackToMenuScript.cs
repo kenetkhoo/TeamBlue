@@ -10,18 +10,21 @@ public class BackToMenuScript : MonoBehaviour {
 
 	void Start () 
 	{
-		width = ((Screen.width / 2) * Camera.main.pixelWidth) / Screen.width;
-		height =  ((Screen.height/ 10) * Camera.main.pixelHeight) / Screen.height;
+		width = ((Screen.width / 4) * Camera.main.pixelWidth) / Screen.width;
+		height =  ((Screen.height/ 12) * Camera.main.pixelHeight) / Screen.height;
 		content.image = (Texture2D)image;
 	}
 		
 	void OnGUI(){
-		customButton.fontSize = Mathf.RoundToInt (Screen.height / 30f);
-		customButton.fixedHeight = height*5;
+		customButton.fontSize = Mathf.RoundToInt (Screen.height / 2f);
+		customButton.fixedHeight = height*2;
 		customButton.fixedWidth = width;
-		if(GUI.Button (new Rect(Screen.width / 17.7f , Screen.height/16.5f, width, height*4), "Back To Menu", customButton))
+		//GUI.backgroundColor = Color.clear;
+		if(GUI.Button (new Rect(Screen.width /16.5f, Screen.height/20.5f, width, height), content))
 		{
 			Application.LoadLevel("TitleScene");
 		}
 	}
 }
+
+//if(GUI.Button (new Rect(Screen.width / 2f , Screen.height/2f, width, height*3), "back", customButton))
