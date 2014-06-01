@@ -115,7 +115,7 @@ public class WeatherScript : MonoBehaviour
 		GUI.skin.button.fontSize = Mathf.RoundToInt (Screen.height / 30f);
 		GUI.contentColor = Color.black; 
 		GUI.Label(new Rect(Screen.width / 5.5f , Screen.height/8.7f, width, height*6), "\n" + Fahrenheit.ToString() + "F" + " " + Celsius.ToString() + "C" 
-		          + "\n" + Description.ToString() + "\n" + City.ToString()+ ", " + Country.ToString() +"\n" + lon +" lon" + " " + lat+ " lat", myStyl);
+		          + "\n" + Description.ToString() + "\n" + City.ToString(), myStyl);
 		cityName  = GUI.TextField (new Rect (Screen.width / 5.0f, Screen.height / 1.9f,Screen.width/2.0f, Screen.height/15f), cityName);
 		//for computer
 		if ((Event.current.keyCode == KeyCode.Return )) {
