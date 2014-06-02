@@ -50,7 +50,21 @@ public class GameOverScript : MonoBehaviour {
 			audio.Stop();
 			audio.clip = buttonsound;
 			audio.Play();
-			Application.LoadLevel("SunnyScene");
+			int weatherID = PlayerPrefs.GetInt("WID");
+			/* display weather scene in game depending on weather code **/
+			
+			if(weatherID >= 200 && weatherID <= 523){
+				Application.LoadLevel("RainyScene");
+			}
+			else if (weatherID >= 600 && weatherID <= 621){
+				Application.LoadLevel("SnowyScene");
+			}
+			else if (weatherID >= 953 && weatherID <= 962){
+				Application.LoadLevel ("WindyScene");
+			}
+			else{
+				Application.LoadLevel("SunnyScene");
+			}
 		}
 		
 		if(GUI.Button (new Rect(Screen.width / 4 , Screen.height*1.75f/4.5f, width, height*1.75f), "Main Menu", customButton))
