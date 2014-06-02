@@ -113,6 +113,7 @@ public class WeatherScript : MonoBehaviour
 		var myStyl = new GUIStyle();
 		myStyl.fontSize = Mathf.RoundToInt (Screen.height / 25f);
 		GUI.skin.button.fontSize = Mathf.RoundToInt (Screen.height / 30f);
+		GUI.skin.textField.fontSize = Mathf.RoundToInt (Screen.height / 30f);
 		GUI.contentColor = Color.black; 
 		GUI.Box(new Rect(Screen.width / 4.5f , Screen.height/5.5f, width, height*3), "Weather");
 		GUI.Label(new Rect(Screen.width / 3.2f , Screen.height/4.5f, width, height), "\n" + Fahrenheit.ToString() + "F" + " " + Celsius.ToString() + "C" 
