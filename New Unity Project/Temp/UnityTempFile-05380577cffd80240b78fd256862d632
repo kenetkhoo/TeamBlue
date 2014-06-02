@@ -36,14 +36,9 @@
 -define:ENABLE_SINGLE_INSTANCE_BUILD_SETTING
 -define:UNITY_4_3_4
 -define:UNITY_4_3
--define:ENABLE_PROFILER
--define:UNITY_EDITOR
--define:UNITY_EDITOR_WIN
 -define:CROSS_PLATFORM_INPUT
--r:"C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEngine.dll"
+-r:D:/NewApps/Editor/Data/PlaybackEngines/AndroidPlayer/Managed/UnityEngine.dll
 -r:Library/ScriptAssemblies/Assembly-CSharp-firstpass.dll
 -r:Assets/plugins/ICSharpCode.SharpZipLib.dll
--r:"C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEditor.dll"
--i:UnityEditor
 "Assets/JSON Tests/UnityScript/Test_UnityScript.js"
 "Assets/Menu/Scripts/GPS Script.js"

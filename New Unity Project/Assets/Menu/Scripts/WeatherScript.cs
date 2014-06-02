@@ -112,11 +112,12 @@ public class WeatherScript : MonoBehaviour
 	{
 		var myStyl = new GUIStyle();
 		myStyl.fontSize = Mathf.RoundToInt (Screen.height / 25f);
+		myStyl.normal.textColor = Color.white;
 		GUI.skin.button.fontSize = Mathf.RoundToInt (Screen.height / 30f);
 		GUI.skin.textField.fontSize = Mathf.RoundToInt (Screen.height / 30f);
-		GUI.contentColor = Color.black; 
+		GUI.contentColor = Color.white; 
 		GUI.Box(new Rect(Screen.width / 4.5f , Screen.height/5.5f, width, height*3), "Weather");
-		GUI.Label(new Rect(Screen.width / 3.2f , Screen.height/4.5f, width, height), "\n" + Fahrenheit.ToString() + "F" + " " + Celsius.ToString() + "C" 
+		GUI.Label(new Rect(Screen.width / 4.0f , Screen.height/4.5f, width, height), "\n" + Fahrenheit.ToString() + "F" + " " + Celsius.ToString() + "C" 
 		          + "\n" + Description.ToString() + "\n" + City.ToString(), myStyl);
 		cityName  = GUI.TextField (new Rect (Screen.width / 5.0f, Screen.height / 1.9f,Screen.width/2.0f, Screen.height/15f), cityName);
 		//for computer
