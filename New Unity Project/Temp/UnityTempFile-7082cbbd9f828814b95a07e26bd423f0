@@ -2,8 +2,9 @@
 -target:library
 -nowarn:0169
 -out:Temp/Assembly-CSharp-firstpass.dll
--r:D:/NewApps/Editor/Data/PlaybackEngines/AndroidPlayer/Managed/UnityEngine.dll
+-r:"C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEngine.dll"
 -r:Assets/plugins/ICSharpCode.SharpZipLib.dll
+-r:"C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEditor.dll"
 -define:UNITY_ANDROID
 -define:ENABLE_MICROPHONE
 -define:ENABLE_TEXTUREID_MAP
@@ -31,8 +32,11 @@
 -define:ENABLE_SINGLE_INSTANCE_BUILD_SETTING
 -define:UNITY_4_3_4
 -define:UNITY_4_3
+-define:ENABLE_PROFILER
+-define:UNITY_EDITOR
+-define:UNITY_EDITOR_WIN
 -define:CROSS_PLATFORM_INPUT
 Assets/plugins/GPS.cs
 Assets/plugins/SimpleJSON.cs
--r:D:/NewApps/Editor/Data/Mono\lib/mono/unity\System.Runtime.Serialization.dll
--r:D:/NewApps/Editor/Data/Mono\lib/mono/unity\System.Xml.Linq.dll
+-r:"C:/Program Files (x86)/Unity/Editor/Data/Mono\lib/mono/unity\System.Runtime.Serialization.dll"
+-r:"C:/Program Files (x86)/Unity/Editor/Data/Mono\lib/mono/unity\System.Xml.Linq.dll"

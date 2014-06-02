@@ -10,12 +10,14 @@ public class GameOverScript : MonoBehaviour {
 	GUIContent content = new GUIContent();
 	public AudioClip buttonsound;
 	public GUIStyle customButton;
+
 	void Start () {
 		width = ((Screen.width / 2) * Camera.main.pixelWidth) / Screen.width;
 		height =  ((Screen.height/ 10) * Camera.main.pixelHeight) / Screen.height;
 		content.image = (Texture2D)image;
 		score = PlayerPrefs.GetInt ("Score");
 		calculateHighScore();
+
 	}
 	void calculateHighScore()
 	{
@@ -35,6 +37,7 @@ public class GameOverScript : MonoBehaviour {
 	{
 		GUI.skin.button.fontSize = Mathf.RoundToInt (Screen.height / 20f);
 		GUI.skin.label.fontSize = Mathf.RoundToInt (Screen.height / 22f);
+		GUI.contentColor = Color.black;
 		GUI.Label (new Rect (Screen.width / 4 , Screen.height/10, width*2, height), "GAME OVER");
 		
 		GUI.Label (new Rect (Screen.width / 4, Screen.height/6, width, height), "Score: " + score);
